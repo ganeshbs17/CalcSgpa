@@ -10,7 +10,7 @@ const sub8 = document.getElementById('sub-8');
 
 //results
 const ext_text = document.getElementById('ext_calculated');
-// const message = document.getElementById('message_text')
+const message = document.getElementById('message_text')
 
 //buttons
 const successButton = document.getElementById('btn-success');
@@ -20,26 +20,42 @@ const resetButton = document.getElementById('btn-reset');
 
 function calculate_ext() {
 	
-	alert('Debug mode!');
 
-	let m1,m2,m3,m4,m5,m6.m7,m8,ext;
+	let m1, m2, m3, m4, m5, m6, m7 ,m8, ext;
 
-	m1=Number(sub1.value);
-	m2=Number(sub2.value);
-	m3=Number(sub3.value);
-	m4=Number(sub4.value);
-	m5=Number(sub5.value);
-	m6=Number(sub6.value);
-	m7=Number(sub7.value);
-	m8=Number(sub8.value);
+	m1 = Number(sub1.value);
+	m2 = Number(sub2.value);
+	m3 = Number(sub3.value);
+	m4 = Number(sub4.value);
+	m5 = Number(sub5.value);
+	m6 = Number(sub6.value);
+	m7 = Number(sub7.value);
+	m8 = Number(sub8.value);
 
 	ext=((((m1+m2+m3+m4+m5+m6+m7+m8)/8)/60)*50);
 
-	ext_text.textContent= ext.toFixed(2);
+	ext_text.textContent= ext.toFixed(0)+" ±1";
+}
 
 	
 
-}
+// }
+// function showMessage(marks) {
+//     if (marks < 40) {
+//         return "You have failed. try again!";
+//     } else if(marks >= 40 && marks <= 50) {
+//         return "You have passed with average result. try more!";
+//     } else if(marks >= 60 && marks <= 69) {
+//         return "You got first class!";
+//     } else if(marks >= 70 && marks <=79) {
+//         return "You got star marks. it is very good result";
+//     } else if(marks >= 80) {
+//         return "You got A+. it is outstanding result";
+//     } else {
+//         return "you have put more than 100 marks";
+//     }
+
+// }
 
 function reset() {
     sub1.value = "";
@@ -52,7 +68,7 @@ function reset() {
     sub8.value = "";
 
     
-    finalMarksText.textContent = "___________________";
+    ext_text.textContent = "___________________";
     
 
 }
@@ -72,6 +88,6 @@ function debug(){
 
 }
 
-successButton.addEventListener('click', debug);
-resetButton.addEventListener('click', debug);
+successButton.addEventListener('click', eventHandle);
+resetButton.addEventListener('click', reset);
 
