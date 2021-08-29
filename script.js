@@ -108,15 +108,25 @@ function calculate_sgpa4(){
 // }
 
 function reset() {
-    sub1.value, sub41.value = "";
-    sub2.value, sub42.value = "";
-    sub3.value, sub43.value = "";
-    sub4.value, sub44.value = "";
-    sub5.value, sub45.value = "";
-    sub6.value, sub46.value = "";
-    sub7.value, sub47.value = "";
-    sub8.value, sub48.value = "";
-    ext_m.value = "";
+	
+    sub1.value = "";
+    sub2.value = "";
+    sub3.value = "";
+    sub4.value = "";
+    sub5.value = "";
+    sub6.value = "";
+    sub7.value = "";
+    sub8.value = "";
+    ext_m.value = "" ;
+
+    sub41.value  = "";
+ 	sub42.value = "";
+	sub43.value = "";
+	sub44.value = "";
+	sub45.value = "";
+	sub46.value = "";
+	sub47.value = "";
+	sub48.value  = "";
 
     
     ext_text.textContent, sgpa4_val.textContent = "___________";
